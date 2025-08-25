@@ -1,3 +1,5 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const services = [
   {
     title: "Custom Itineraries",
@@ -42,23 +44,25 @@ const services = [
 ];
 
 const Services = () => {
+  useScrollAnimation();
+
   return (
     <section id="services" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered heading */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6 fade-in">
             Services We Offer
           </h2>
-          <p className="font-sans text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-sans text-xl text-white/80 max-w-4xl mx-auto leading-relaxed fade-in stagger-1">
             Comprehensive luxury travel services tailored to discerning travelers
           </p>
         </div>
 
-        {/* 2x2 grid of service cards */}
+        {/* 2x2 grid of service cards with staggered animations */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="card-dark p-8">
+            <div key={index} className={`card-dark p-8 scale-in stagger-${index + 1}`}>
               {/* Card heading - serif font */}
               <h3 className="font-serif text-2xl font-semibold text-white mb-3">
                 {service.title}

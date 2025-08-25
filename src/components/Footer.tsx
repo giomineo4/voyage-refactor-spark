@@ -1,11 +1,13 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const Footer = () => {
+  useScrollAnimation();
+
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Thin dividing line is handled by border-t above */}
-        
-        {/* Centered footer content */}
-        <div className="text-center space-y-4">
+        {/* Centered footer content with animation */}
+        <div className="text-center space-y-4 fade-in">
           {/* Brand name and tagline */}
           <div>
             <h4 className="font-serif text-xl font-medium text-white mb-2">

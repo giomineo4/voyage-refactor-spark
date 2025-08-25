@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const features = [
   {
     title: "Bespoke Itineraries",
@@ -18,26 +21,28 @@ const features = [
 ];
 
 const WhatWeDo = () => {
+  useScrollAnimation();
+
   return (
     <section id="what-we-do" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered heading - White serif font */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6 fade-in">
             What We Do
           </h2>
           {/* Standardized phrasing */}
-          <p className="font-sans text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-sans text-xl text-white/80 max-w-4xl mx-auto leading-relaxed fade-in stagger-1">
             Elevating travel into an art form across the US & Europe's most prestigious destinations
           </p>
         </div>
 
-        {/* 2x2 grid of dark cards with rounded corners */}
+        {/* 2x2 grid of dark cards with staggered animations */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="card-dark p-8"
+              className={`card-dark p-8 slide-up stagger-${index + 1}`}
             >
               {/* Card heading - serif typeface */}
               <h3 className="font-serif text-2xl font-semibold text-white mb-4">

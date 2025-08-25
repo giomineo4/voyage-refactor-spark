@@ -4,8 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
+  useScrollAnimation();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,20 +46,20 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered heading */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6 fade-in">
             Contact Us
           </h2>
           {/* Standardized phrasing */}
-          <p className="font-sans text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-xl text-white/80 max-w-3xl mx-auto leading-relaxed fade-in stagger-1">
             Ready to discover hidden treasures across the US & Europe?
           </p>
         </div>
 
-        {/* Balanced two-column layout */}
+        {/* Balanced two-column layout with animations */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           
           {/* Left column - Form with better balance */}
-          <div className="card-dark p-8 border border-white/10 shadow-xl">
+          <div className="card-dark p-8 border border-white/10 shadow-xl slide-up stagger-1">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="font-sans text-white font-medium">
@@ -129,7 +132,7 @@ const Contact = () => {
           </div>
 
           {/* Right column - Our Promise with matching styling */}
-          <div className="card-dark p-8 border border-white/10 shadow-xl">
+          <div className="card-dark p-8 border border-white/10 shadow-xl slide-up stagger-2">
             <h3 className="font-serif text-2xl font-semibold text-white mb-6">
               Our Promise
             </h3>
