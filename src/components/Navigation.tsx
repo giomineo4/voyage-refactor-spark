@@ -22,40 +22,40 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
+          ? "apple-glass border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-8 py-6">
         <div className="flex items-center justify-between">
           <div 
-            className="font-display text-xl font-bold cursor-pointer"
+            className="font-display text-2xl font-black cursor-pointer chrome-accent tracking-tight"
             onClick={() => scrollToSection("hero")}
           >
             MINEO TRAVEL
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             <Button
               variant="ghost"
               onClick={() => scrollToSection("what-we-do")}
-              className="text-foreground hover:text-accent font-medium"
+              className="text-white/80 hover:text-white font-medium text-lg py-2 px-4 transition-all duration-300 hover:bg-white/5"
             >
               What We Do
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-accent font-medium"
+              className="text-white/80 hover:text-white font-medium text-lg py-2 px-4 transition-all duration-300 hover:bg-white/5"
             >
               Services
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-accent font-medium"
+              className="text-white/80 hover:text-white font-medium text-lg py-2 px-4 transition-all duration-300 hover:bg-white/5"
             >
               Contact
             </Button>

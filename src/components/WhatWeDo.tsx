@@ -26,29 +26,29 @@ const features = [
 
 const WhatWeDo = () => {
   return (
-    <section id="what-we-do" className="py-24 bg-section-gradient">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="section-title text-navy">What We Do</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+    <section id="what-we-do" className="py-32 bg-black">
+      <div className="container mx-auto px-8">
+        <div className="text-center mb-20">
+          <h2 className="section-title text-white mb-6">What We Do</h2>
+          <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed font-light">
             Elevating travel into an art form across the US & Europe's most prestigious destinations
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="card-elevated border-0 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-300"
+              className="card-elevated hover:border-chrome/30 transition-all duration-500 group"
             >
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-accent" />
+              <CardContent className="p-10 text-center">
+                <div className="w-20 h-20 bg-chrome/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-chrome/20 transition-all duration-300">
+                  <feature.icon className="w-10 h-10 text-chrome" />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-4 text-navy">
+                <h3 className="font-display text-2xl font-bold mb-6 text-white group-hover:chrome-accent transition-all duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-white/70 leading-relaxed font-light">
                   {feature.description}
                 </p>
               </CardContent>

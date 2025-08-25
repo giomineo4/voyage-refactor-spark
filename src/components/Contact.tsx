@@ -55,28 +55,28 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-section-gradient">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="section-title text-navy">Contact Us</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+    <section id="contact" className="py-32 bg-black">
+      <div className="container mx-auto px-8">
+        <div className="text-center mb-20">
+          <h2 className="section-title text-white mb-6">Contact Us</h2>
+          <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed font-light">
             Ready to discover hidden treasures across the US & Europe?
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
           {/* Contact Form */}
-          <Card className="card-elevated border-0 bg-background/90 backdrop-blur-sm">
+          <Card className="card-elevated">
             <CardHeader>
-              <CardTitle className="font-display text-2xl text-navy">
+              <CardTitle className="font-display text-3xl font-bold text-white mb-2">
                 Start Your Journey
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-navy font-medium">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <Label htmlFor="name" className="text-white font-medium text-lg">
                       Name *
                     </Label>
                     <Input
@@ -85,11 +85,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="border-accent/20 focus:border-accent"
+                      className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 py-4 text-lg"
+                      placeholder="Your full name"
                     />
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-navy font-medium">
+                  <div className="space-y-3">
+                    <Label htmlFor="email" className="text-white font-medium text-lg">
                       Email *
                     </Label>
                     <Input
@@ -99,13 +100,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="border-accent/20 focus:border-accent"
+                      className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 py-4 text-lg"
+                      placeholder="your.email@domain.com"
                     />
                   </div>
                 </div>
                 
-                <div className="space-y-2">
-                  <Label htmlFor="destination" className="text-navy font-medium">
+                <div className="space-y-3">
+                  <Label htmlFor="destination" className="text-white font-medium text-lg">
                     Destination of Interest
                   </Label>
                   <Input
@@ -114,12 +116,12 @@ const Contact = () => {
                     value={formData.destination}
                     onChange={handleInputChange}
                     placeholder="e.g., Tuscany, French Riviera, Greek Islands..."
-                    className="border-accent/20 focus:border-accent"
+                    className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 py-4 text-lg"
                   />
                 </div>
                 
-                <div className="space-y-2">
-                  <Label htmlFor="dreams" className="text-navy font-medium">
+                <div className="space-y-3">
+                  <Label htmlFor="dreams" className="text-white font-medium text-lg">
                     Travel Dreams
                   </Label>
                   <Textarea
@@ -127,16 +129,16 @@ const Contact = () => {
                     name="dreams"
                     value={formData.dreams}
                     onChange={handleInputChange}
-                    rows={4}
+                    rows={5}
                     placeholder="Tell us about your perfect luxury travel experience..."
-                    className="border-accent/20 focus:border-accent resize-none"
+                    className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 resize-none text-lg"
                   />
                 </div>
                 
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-navy hover:bg-navy-light text-white font-medium py-3"
+                  className="w-full chrome-border bg-transparent hover:bg-white/5 text-white font-medium py-6 text-xl transition-all duration-300 hover:scale-105"
                 >
                   Send Message
                 </Button>
@@ -145,18 +147,18 @@ const Contact = () => {
           </Card>
 
           {/* Contact Info & Promises */}
-          <div className="space-y-8">
-            <Card className="card-elevated border-0 bg-background/90 backdrop-blur-sm">
+          <div className="space-y-10">
+            <Card className="card-elevated">
               <CardHeader>
-                <CardTitle className="font-display text-2xl text-navy">
+                <CardTitle className="font-display text-3xl font-bold text-white mb-2">
                   Email Us Directly
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <a 
                     href="mailto:hello@mineotravel.com"
-                    className="text-accent font-medium text-lg hover:text-accent/80 transition-colors"
+                    className="chrome-accent font-medium text-2xl hover:text-chrome-light transition-colors duration-300 block"
                   >
                     hello@mineotravel.com
                   </a>
@@ -164,20 +166,20 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-elevated border-0 bg-background/90 backdrop-blur-sm">
+            <Card className="card-elevated">
               <CardHeader>
-                <CardTitle className="font-display text-2xl text-navy">
+                <CardTitle className="font-display text-3xl font-bold text-white mb-2">
                   Our Promise
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid gap-4">
+                <div className="grid gap-6">
                   {promises.map((promise, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <promise.icon className="w-5 h-5 text-accent" />
+                    <div key={index} className="flex items-center gap-5 group">
+                      <div className="w-14 h-14 bg-chrome/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-chrome/20 transition-all duration-300">
+                        <promise.icon className="w-7 h-7 text-chrome" />
                       </div>
-                      <span className="text-foreground font-medium">
+                      <span className="text-white/80 font-medium text-lg">
                         {promise.title}
                       </span>
                     </div>

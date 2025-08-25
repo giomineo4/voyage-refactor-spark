@@ -46,35 +46,35 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="section-title text-navy">Services We Offer</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+    <section id="services" className="py-32 bg-gradient-to-b from-black to-gray-900">
+      <div className="container mx-auto px-8">
+        <div className="text-center mb-20">
+          <h2 className="section-title text-white mb-6">Services We Offer</h2>
+          <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed font-light">
             Comprehensive luxury travel services tailored to discerning travelers
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="card-elevated border border-border/50 hover:border-accent/30 transition-all duration-300"
+              className="card-elevated hover:border-chrome/30 transition-all duration-500 group"
             >
-              <CardHeader className="pb-4">
-                <CardTitle className="font-display text-2xl text-navy mb-2">
+              <CardHeader className="pb-6">
+                <CardTitle className="font-display text-3xl font-bold text-white mb-4 group-hover:chrome-accent transition-all duration-300">
                   {service.title}
                 </CardTitle>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-white/70 leading-relaxed text-lg font-light">
                   {service.description}
                 </p>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-foreground">{feature}</span>
+                    <li key={featureIndex} className="flex items-start gap-4">
+                      <CheckCircle className="w-6 h-6 text-chrome mt-1 flex-shrink-0" />
+                      <span className="text-white/80 text-lg font-light">{feature}</span>
                     </li>
                   ))}
                 </ul>
