@@ -18,12 +18,28 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				display: ['var(--font-display)', 'serif'],
+				body: ['var(--font-body)', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				navy: {
+					DEFAULT: 'hsl(var(--navy))',
+					light: 'hsl(var(--navy-light))'
+				},
+				cream: {
+					DEFAULT: 'hsl(var(--cream))',
+					dark: 'hsl(var(--cream-dark))'
+				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					light: 'hsl(var(--gold-light))'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
