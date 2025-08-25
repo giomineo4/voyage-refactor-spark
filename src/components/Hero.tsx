@@ -20,20 +20,25 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 hero-overlay" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
-        <h1 className="hero-title mb-6">
+        {/* Large serif headline */}
+        <h1 className="font-serif text-6xl md:text-8xl font-bold text-white mb-8 tracking-tight">
           MINEO TRAVEL
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+        
+        {/* Smaller sans-serif tagline */}
+        <p className="font-sans text-xl md:text-2xl text-white/90 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
           Curated luxury experiences across the US & Europe
         </p>
+        
+        {/* White pill-shaped button with black text */}
         <Button
           onClick={scrollToContact}
-          className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm px-8 py-3 text-lg font-medium rounded-full transition-all duration-300"
+          className="btn-pill bg-white hover:bg-gray-100 text-black font-sans font-medium px-10 py-4 text-lg transition-all duration-300 shadow-lg"
         >
           Start Planning
         </Button>

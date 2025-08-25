@@ -1,12 +1,10 @@
-import { Card, CardContent } from "@/components/ui/card";
-
 const features = [
   {
     title: "Bespoke Itineraries",
     description: "Every journey across the US and Europe is meticulously crafted to match your unique preferences, interests, and travel aspirations."
   },
   {
-    title: "Curated Like a Local",
+    title: "Curated Like a Local", 
     description: "Access exclusive experiences and hidden gems across the US and Europe that only insiders know, creating authentic cultural connections."
   },
   {
@@ -21,30 +19,34 @@ const features = [
 
 const WhatWeDo = () => {
   return (
-    <section id="what-we-do" className="py-24 bg-white">
+    <section id="what-we-do" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Centered heading - White serif font */}
         <div className="text-center mb-16">
-          <h2 className="section-title text-gray-900">What We Do</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">
+            What We Do
+          </h2>
+          <p className="font-sans text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
             Elevating travel into an art form across the US & Europe's most prestigious destinations
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* 2x2 grid of dark cards with rounded corners */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="card-clean border-0 bg-white"
+              className="card-dark p-8"
             >
-              <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
+              {/* Card heading - serif typeface */}
+              <h3 className="font-serif text-2xl font-semibold text-white mb-4">
+                {feature.title}
+              </h3>
+              {/* Description - light grey sans-serif text */}
+              <p className="font-sans text-textMuted leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

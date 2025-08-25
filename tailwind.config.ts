@@ -19,7 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['var(--font-sans)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				serif: ['var(--font-serif)', 'Playfair Display', 'serif'],
+				sans: ['var(--font-sans)', 'Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -27,20 +28,8 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				white: 'hsl(var(--white))',
-				black: 'hsl(var(--black))',
-				gray: {
-					50: 'hsl(var(--gray-50))',
-					100: 'hsl(var(--gray-100))',
-					200: 'hsl(var(--gray-200))',
-					300: 'hsl(var(--gray-300))',
-					400: 'hsl(var(--gray-400))',
-					500: 'hsl(var(--gray-500))',
-					600: 'hsl(var(--gray-600))',
-					700: 'hsl(var(--gray-700))',
-					800: 'hsl(var(--gray-800))',
-					900: 'hsl(var(--gray-900))',
-				},
+				cardDark: 'hsl(var(--card-dark))',
+				textMuted: 'hsl(var(--text-muted))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
