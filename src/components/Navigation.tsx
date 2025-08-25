@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,43 +21,40 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "apple-glass border-b border-white/10"
+          ? "bg-white/95 backdrop-blur-sm border-b border-gray-200"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-8 py-6">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div 
-            className="font-display text-2xl font-black cursor-pointer chrome-accent tracking-tight"
+            className="text-xl font-semibold cursor-pointer text-white"
             onClick={() => scrollToSection("hero")}
           >
             MINEO TRAVEL
           </div>
           
-          <div className="hidden md:flex items-center space-x-12">
-            <Button
-              variant="ghost"
+          <div className="hidden md:flex items-center space-x-8">
+            <button
               onClick={() => scrollToSection("what-we-do")}
-              className="text-white/80 hover:text-white font-medium text-lg py-2 px-4 transition-all duration-300 hover:bg-white/5"
+              className="text-white hover:text-gray-200 font-medium transition-colors"
             >
               What We Do
-            </Button>
-            <Button
-              variant="ghost"
+            </button>
+            <button
               onClick={() => scrollToSection("services")}
-              className="text-white/80 hover:text-white font-medium text-lg py-2 px-4 transition-all duration-300 hover:bg-white/5"
+              className="text-white hover:text-gray-200 font-medium transition-colors"
             >
               Services
-            </Button>
-            <Button
-              variant="ghost"
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
-              className="text-white/80 hover:text-white font-medium text-lg py-2 px-4 transition-all duration-300 hover:bg-white/5"
+              className="text-white hover:text-gray-200 font-medium transition-colors"
             >
               Contact
-            </Button>
+            </button>
           </div>
         </div>
       </div>

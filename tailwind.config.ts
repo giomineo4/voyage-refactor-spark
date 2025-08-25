@@ -19,8 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				display: ['var(--font-display)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				body: ['var(--font-body)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				sans: ['var(--font-sans)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -28,18 +27,19 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				black: 'hsl(var(--black))',
 				white: 'hsl(var(--white))',
-				chrome: {
-					DEFAULT: 'hsl(var(--chrome))',
-					light: 'hsl(var(--chrome-light))',
-					dark: 'hsl(var(--chrome-dark))'
-				},
+				black: 'hsl(var(--black))',
 				gray: {
-					900: 'hsl(var(--gray-900))',
-					800: 'hsl(var(--gray-800))',
-					700: 'hsl(var(--gray-700))',
+					50: 'hsl(var(--gray-50))',
+					100: 'hsl(var(--gray-100))',
+					200: 'hsl(var(--gray-200))',
+					300: 'hsl(var(--gray-300))',
+					400: 'hsl(var(--gray-400))',
+					500: 'hsl(var(--gray-500))',
 					600: 'hsl(var(--gray-600))',
+					700: 'hsl(var(--gray-700))',
+					800: 'hsl(var(--gray-800))',
+					900: 'hsl(var(--gray-900))',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

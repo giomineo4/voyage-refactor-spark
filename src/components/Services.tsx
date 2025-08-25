@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
 
 const services = [
   {
@@ -46,35 +45,35 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 bg-gradient-to-b from-black to-gray-900">
-      <div className="container mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="section-title text-white mb-6">Services We Offer</h2>
-          <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed font-light">
+    <section id="services" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="section-title text-gray-900">Services We Offer</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive luxury travel services tailored to discerning travelers
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="card-elevated hover:border-chrome/30 transition-all duration-500 group"
+              className="card-clean border border-gray-200 bg-white"
             >
-              <CardHeader className="pb-6">
-                <CardTitle className="font-display text-3xl font-bold text-white mb-4 group-hover:chrome-accent transition-all duration-300">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl text-gray-900 mb-2">
                   {service.title}
                 </CardTitle>
-                <p className="text-white/70 leading-relaxed text-lg font-light">
+                <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-4">
-                      <CheckCircle className="w-6 h-6 text-chrome mt-1 flex-shrink-0" />
-                      <span className="text-white/80 text-lg font-light">{feature}</span>
+                    <li key={featureIndex} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>

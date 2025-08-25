@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Clock, Shield, Heart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -36,47 +35,35 @@ const Contact = () => {
   };
 
   const promises = [
-    {
-      icon: Clock,
-      title: "24-hour response time"
-    },
-    {
-      icon: Heart,
-      title: "Complimentary consultation"
-    },
-    {
-      icon: Shield,
-      title: "Personalized attention"
-    },
-    {
-      icon: Mail,
-      title: "Transparent pricing"
-    }
+    "24-hour response time",
+    "Complimentary consultation", 
+    "Personalized attention",
+    "Transparent pricing"
   ];
 
   return (
-    <section id="contact" className="py-32 bg-black">
-      <div className="container mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="section-title text-white mb-6">Contact Us</h2>
-          <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed font-light">
+    <section id="contact" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="section-title text-gray-900">Contact Us</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Ready to discover hidden treasures across the US & Europe?
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="card-elevated">
+          <Card className="card-clean border border-gray-200 bg-white">
             <CardHeader>
-              <CardTitle className="font-display text-3xl font-bold text-white mb-2">
+              <CardTitle className="text-2xl text-gray-900">
                 Start Your Journey
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <Label htmlFor="name" className="text-white font-medium text-lg">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-gray-700 font-medium">
                       Name *
                     </Label>
                     <Input
@@ -85,12 +72,11 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 py-4 text-lg"
-                      placeholder="Your full name"
+                      className="border-gray-300 focus:border-gray-500"
                     />
                   </div>
-                  <div className="space-y-3">
-                    <Label htmlFor="email" className="text-white font-medium text-lg">
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-gray-700 font-medium">
                       Email *
                     </Label>
                     <Input
@@ -100,14 +86,13 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 py-4 text-lg"
-                      placeholder="your.email@domain.com"
+                      className="border-gray-300 focus:border-gray-500"
                     />
                   </div>
                 </div>
                 
-                <div className="space-y-3">
-                  <Label htmlFor="destination" className="text-white font-medium text-lg">
+                <div className="space-y-2">
+                  <Label htmlFor="destination" className="text-gray-700 font-medium">
                     Destination of Interest
                   </Label>
                   <Input
@@ -116,12 +101,12 @@ const Contact = () => {
                     value={formData.destination}
                     onChange={handleInputChange}
                     placeholder="e.g., Tuscany, French Riviera, Greek Islands..."
-                    className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 py-4 text-lg"
+                    className="border-gray-300 focus:border-gray-500"
                   />
                 </div>
                 
-                <div className="space-y-3">
-                  <Label htmlFor="dreams" className="text-white font-medium text-lg">
+                <div className="space-y-2">
+                  <Label htmlFor="dreams" className="text-gray-700 font-medium">
                     Travel Dreams
                   </Label>
                   <Textarea
@@ -129,16 +114,15 @@ const Contact = () => {
                     name="dreams"
                     value={formData.dreams}
                     onChange={handleInputChange}
-                    rows={5}
+                    rows={4}
                     placeholder="Tell us about your perfect luxury travel experience..."
-                    className="bg-gray-800/50 border-white/20 focus:border-chrome text-white placeholder:text-white/40 resize-none text-lg"
+                    className="border-gray-300 focus:border-gray-500 resize-none"
                   />
                 </div>
                 
                 <Button 
                   type="submit"
-                  size="lg"
-                  className="w-full chrome-border bg-transparent hover:bg-white/5 text-white font-medium py-6 text-xl transition-all duration-300 hover:scale-105"
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-3"
                 >
                   Send Message
                 </Button>
@@ -147,44 +131,40 @@ const Contact = () => {
           </Card>
 
           {/* Contact Info & Promises */}
-          <div className="space-y-10">
-            <Card className="card-elevated">
+          <div className="space-y-8">
+            <Card className="card-clean border border-gray-200 bg-white">
               <CardHeader>
-                <CardTitle className="font-display text-3xl font-bold text-white mb-2">
+                <CardTitle className="text-2xl text-gray-900">
                   Email Us Directly
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <a 
-                    href="mailto:hello@mineotravel.com"
-                    className="chrome-accent font-medium text-2xl hover:text-chrome-light transition-colors duration-300 block"
-                  >
-                    hello@mineotravel.com
-                  </a>
-                </div>
+                <a 
+                  href="mailto:hello@mineotravel.com"
+                  className="text-gray-700 font-medium text-lg hover:text-gray-900 transition-colors"
+                >
+                  hello@mineotravel.com
+                </a>
               </CardContent>
             </Card>
 
-            <Card className="card-elevated">
+            <Card className="card-clean border border-gray-200 bg-white">
               <CardHeader>
-                <CardTitle className="font-display text-3xl font-bold text-white mb-2">
+                <CardTitle className="text-2xl text-gray-900">
                   Our Promise
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid gap-6">
+                <ul className="space-y-3">
                   {promises.map((promise, index) => (
-                    <div key={index} className="flex items-center gap-5 group">
-                      <div className="w-14 h-14 bg-chrome/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-chrome/20 transition-all duration-300">
-                        <promise.icon className="w-7 h-7 text-chrome" />
-                      </div>
-                      <span className="text-white/80 font-medium text-lg">
-                        {promise.title}
+                    <li key={index} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full flex-shrink-0" />
+                      <span className="text-gray-700 font-medium">
+                        {promise}
                       </span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </CardContent>
             </Card>
           </div>
