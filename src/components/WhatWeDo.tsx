@@ -1,11 +1,11 @@
 const features = [
   {
     title: "Bespoke Itineraries",
-    description: "Every journey across the US and Europe is meticulously crafted to match your unique preferences, interests, and travel aspirations."
+    description: "Every journey across the US & Europe is meticulously crafted to match your unique preferences, interests, and travel aspirations."
   },
   {
     title: "Curated Like a Local", 
-    description: "Access exclusive experiences and hidden gems across the US and Europe that only insiders know, creating authentic cultural connections."
+    description: "Access exclusive experiences and hidden gems across the US & Europe that only insiders know, creating authentic cultural connections."
   },
   {
     title: "Clear & Effortless",
@@ -26,6 +26,7 @@ const WhatWeDo = () => {
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">
             What We Do
           </h2>
+          {/* Standardized phrasing */}
           <p className="font-sans text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
             Elevating travel into an art form across the US & Europe's most prestigious destinations
           </p>

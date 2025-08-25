@@ -30,15 +30,15 @@ const Hero = () => {
           MINEO TRAVEL
         </h1>
         
-        {/* Smaller sans-serif tagline */}
+        {/* Standardized tagline */}
         <p className="font-sans text-xl md:text-2xl text-white/90 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
           Curated luxury experiences across the US & Europe
         </p>
         
-        {/* White pill-shaped button with black text */}
+        {/* White pill-shaped button with hover effect */}
         <Button
           onClick={scrollToContact}
-          className="btn-pill bg-white hover:bg-gray-100 text-black font-sans font-medium px-10 py-4 text-lg transition-all duration-300 shadow-lg"
+          className="btn-pill bg-white hover:bg-black hover:text-white text-black font-sans font-medium px-10 py-4 text-lg transition-all duration-300 shadow-lg border-2 border-transparent hover:border-white"
         >
           Start Planning
         </Button>

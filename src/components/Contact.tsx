@@ -46,16 +46,17 @@ const Contact = () => {
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">
             Contact Us
           </h2>
+          {/* Standardized phrasing */}
           <p className="font-sans text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Ready to discover hidden treasures across the US & Europe?
           </p>
         </div>
 
-        {/* Two-column layout */}
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        {/* Balanced two-column layout */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           
-          {/* Left column - Form */}
-          <div className="card-dark p-8">
+          {/* Left column - Form with better balance */}
+          <div className="card-dark p-8 border border-white/10 shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="font-sans text-white font-medium">
@@ -67,6 +68,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
+                  placeholder="Your full name"
                   className="bg-cardDark border-white/20 text-white placeholder:text-white/50 focus:border-white/50"
                 />
               </div>
@@ -82,6 +84,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
+                  placeholder="you@email.com"
                   className="bg-cardDark border-white/20 text-white placeholder:text-white/50 focus:border-white/50"
                 />
               </div>
@@ -95,6 +98,7 @@ const Contact = () => {
                   name="destination"
                   value={formData.destination}
                   onChange={handleInputChange}
+                  placeholder="e.g., Tuscany, French Riviera, Greek Islands..."
                   className="bg-cardDark border-white/20 text-white placeholder:text-white/50 focus:border-white/50"
                 />
               </div>
@@ -109,22 +113,23 @@ const Contact = () => {
                   value={formData.dreams}
                   onChange={handleInputChange}
                   rows={4}
+                  placeholder="Tell us about your perfect luxury travel experience..."
                   className="bg-cardDark border-white/20 text-white placeholder:text-white/50 focus:border-white/50 resize-none"
                 />
               </div>
               
-              {/* Wide white button */}
+              {/* White button with hover effect */}
               <Button 
                 type="submit"
-                className="w-full bg-white hover:bg-gray-100 text-black font-sans font-medium py-4 text-lg"
+                className="w-full bg-white hover:bg-black hover:text-white text-black font-sans font-medium py-4 text-lg transition-all duration-300 border-2 border-transparent hover:border-white"
               >
                 Send Message
               </Button>
             </form>
           </div>
 
-          {/* Right column - Our Promise */}
-          <div className="card-dark p-8">
+          {/* Right column - Our Promise with matching styling */}
+          <div className="card-dark p-8 border border-white/10 shadow-xl">
             <h3 className="font-serif text-2xl font-semibold text-white mb-6">
               Our Promise
             </h3>
@@ -139,11 +144,11 @@ const Contact = () => {
               </a>
             </div>
             
-            {/* Four promises list */}
+            {/* Four promises list with unified bullet styling */}
             <ul className="space-y-4">
               {promises.map((promise, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-white rounded-full flex-shrink-0" />
+                  <div className="w-2 h-2 bg-white/10 border border-white/10 rounded-full flex-shrink-0" />
                   <span className="font-sans text-white/90">{promise}</span>
                 </li>
               ))}

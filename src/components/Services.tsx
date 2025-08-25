@@ -1,7 +1,7 @@
 const services = [
   {
     title: "Custom Itineraries",
-    description: "Bespoke travel plans across the US and Europe's most captivating destinations",
+    description: "Bespoke travel plans across the US & Europe's most captivating destinations",
     features: [
       "Multi-destination US & European journeys",
       "Day-by-day detailed planning", 
@@ -11,7 +11,7 @@ const services = [
   },
   {
     title: "Luxury Accommodations",
-    description: "Handpicked properties that define luxury across the US and Europe",
+    description: "Handpicked properties that define luxury across the US & Europe",
     features: [
       "Historic palaces & castles",
       "Boutique luxury hotels",
@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: "Culinary Experiences",
-    description: "Gastronomic journeys through the finest kitchens across the US and Europe",
+    description: "Gastronomic journeys through the finest kitchens across the US & Europe",
     features: [
       "Michelin-starred reservations",
       "Private wine cellar tours",
@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Travel Logistics", 
-    description: "Seamless transportation across the US and Europe",
+    description: "Seamless transportation across the US & Europe",
     features: [
       "Private transfers & transportation",
       "High-speed rail & domestic flights",
@@ -69,11 +69,11 @@ const Services = () => {
                 {service.description}
               </p>
               
-              {/* Bullet points with simple white dots */}
+              {/* Unified bullet points matching card border styling */}
               <ul className="space-y-3">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-white/10 border border-white/10 rounded-full mt-2 flex-shrink-0" />
                     <span className="font-sans text-white/90">{feature}</span>
                   </li>
                 ))}
